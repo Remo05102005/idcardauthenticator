@@ -1,7 +1,7 @@
 pip==25.1.1
 streamlit==1.32.0
 opencv-python-headless==4.9.0.80
-numpy==1.26.4
+numpy==2.1.2
 deepface==0.0.79
 Pillow==10.1.0
 pytesseract==0.3.10
@@ -9,5 +9,5 @@ mediapipe==0.10.9
 scipy==1.12.0
 setuptools>=68.0.0
 wheel>=0.42.0
---only-binary :all:
+--only-binary=:all:
 --prefer-binary
