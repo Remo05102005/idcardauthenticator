@@ -2,7 +2,6 @@ import os
 import cv2
 import numpy as np
 from deepface import DeepFace
-import google.generativeai as genai
 from PIL import Image, ImageEnhance
 import pytesseract
 import re
@@ -24,11 +23,6 @@ if os.path.exists(TESSERACT_PATH):
     pytesseract.pytesseract.tesseract_cmd = TESSERACT_PATH
 else:
     st.warning("Warning: Tesseract OCR not found at the specified path. Please install Tesseract OCR and update the path.")
-
-# Configure Google Gemini API
-GOOGLE_API_KEY = "AIzaSyCqPy8J7K3Orccta6-JSo16GqqeKoYMzaQ"
-genai.configure(api_key=GOOGLE_API_KEY)
-model = genai.GenerativeModel('gemini-pro')
 
 def extract_text_from_id(image_path):
     """Extract text from ID card using OCR with optimized preprocessing."""
